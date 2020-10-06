@@ -1,6 +1,6 @@
 M=N-round(.7*N); 
 te=data(N-M+1:N,:);
-load("perceptronIris_weight"); 
+load("perceptronVideos_weight"); 
 rl=zeros(M,1);
 for m=1:M
   tem=[1 te(m,1:D)]';
@@ -9,7 +9,7 @@ end
 [nerr m]=confus(te(:,L),rl)
 
 # Intervalo de confianza al 95 % para el error estimado
-M=18;
+M=7985;
 output_precision(2);
 m=nerr/M
 s=sqrt(m*(1-m)/M)
